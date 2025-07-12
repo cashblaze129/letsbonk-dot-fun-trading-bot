@@ -1,13 +1,15 @@
 # 🚀 LetsBonkDotFun Solana Trading Bot
-<a href="https://t.me/cashblaze129" target="_blank">
-  <img src="https://img.shields.io/badge/Telegram-@Contact_Me-0088cc?style=for-the-badge&logo=telegram&logoColor=white" alt="Telegram Support" />
-</a>
+
 **Super Fastest Solana Trading Bot with Sniper & Copy Trading Capabilities**
 
 [![Python](https://img.shields.io/badge/Python-3.8+-blue.svg)](https://python.org)
 [![gRPC](https://img.shields.io/badge/gRPC-1.50+-green.svg)](https://grpc.io)
 [![Solana](https://img.shields.io/badge/Solana-1.17+-purple.svg)](https://solana.com)
 [![License](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
+
+<a href="https://t.me/cashblaze129" target="_blank">
+  <img src="https://img.shields.io/badge/Telegram-@Contact_Me-0088cc?style=for-the-badge&logo=telegram&logoColor=white" alt="Telegram Support" />
+</a>
 
 ## 🌟 Sniper Bot Video
 
