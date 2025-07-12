@@ -15,7 +15,7 @@
 </div>
 
 
-## 🌟 Working Video
+## 🌟 Sniper Bot Video
 
 https://github.com/user-attachments/assets/9c55ae45-20af-4b73-a443-bec5fada72da
 
