@@ -7,6 +7,8 @@
 [![Solana](https://img.shields.io/badge/Solana-1.17+-purple.svg)](https://solana.com)
 [![License](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
 
+**Express/Typescript Version is Private Repo: If you want, contact to ME on Telegram**
+
 <a href="https://t.me/cashblaze129" target="_blank">
   <img src="https://img.shields.io/badge/Telegram-@Contact_Me-0088cc?style=for-the-badge&logo=telegram&logoColor=white" alt="Telegram Support" />
 </a>
