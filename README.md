@@ -1,6 +1,6 @@
 # 🚀 LetsBonkDotFun Solana Trading Bot
 
-**Super Fastest Solana Trading Bot with Sniper & Copy Trading Capabilities**
+**Super Fastest Solana Trading Bot with Sniper & Copy Trading & Bundler Capabilities**
 
 [![TypeScript](https://img.shields.io/badge/TypeScript-5.3+-blue.svg)](https://typescriptlang.org)
 [![Node.js](https://img.shields.io/badge/Node.js-20+-green.svg)](https://nodejs.org)
