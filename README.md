@@ -2,12 +2,13 @@
 
 **Super Fastest Solana Trading Bot with Sniper & Copy Trading Capabilities**
 
-[![Python](https://img.shields.io/badge/Python-3.8+-blue.svg)](https://python.org)
-[![gRPC](https://img.shields.io/badge/gRPC-1.50+-green.svg)](https://grpc.io)
+[![TypeScript](https://img.shields.io/badge/TypeScript-5.3+-blue.svg)](https://typescriptlang.org)
+[![Node.js](https://img.shields.io/badge/Node.js-20+-green.svg)](https://nodejs.org)
 [![Solana](https://img.shields.io/badge/Solana-1.17+-purple.svg)](https://solana.com)
 [![License](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
 
-**Express/Typescript Version is Private Repo: If you want, contact to ME on Telegram**
+**🎯 TypeScript Version 1 - Monitoring Part Only**
+**🚀 TypeScript Version 2 (Full Trading Bot) - Contact me on Telegram for access**
 
 <a href="https://t.me/cashblaze129" target="_blank">
   <img src="https://img.shields.io/badge/Telegram-@Contact_Me-0088cc?style=for-the-badge&logo=telegram&logoColor=white" alt="Telegram Support" />
@@ -19,14 +20,14 @@ https://github.com/user-attachments/assets/9c55ae45-20af-4b73-a443-bec5fada72da
 
 ## 🌟 Features
 
-### 🎯 Sniper Bot
+### 🎯 Sniper Bot (Version 2 - Available via DM)
 - **Ultra-fast SPL token detection** and automatic sniping
 - **Jupiter aggregator integration** for best swap routes
 - **Raydium DEX support** for liquidity access
 - **Multi-cluster support** (Mainnet, Devnet, Testnet)
 - **Smart contract analysis** and risk assessment
 
-### 📋 Copy Trading
+### 📋 Copy Trading (Version 2 - Available via DM)
 - **Real-time signal copying** from top Solana traders
 - **Portfolio mirroring** with customizable allocation
 - **Risk management** with stop-loss and take-profit
@@ -40,8 +41,38 @@ https://github.com/user-attachments/assets/9c55ae45-20af-4b73-a443-bec5fada72da
 - **Scalable microservices** design
 - **Real-time market data** processing
 
+### 🔍 Version 1 - Monitoring Features
+- **Real-time token launch monitoring** via Geyser
+- **LetsBonk program integration** for token detection
+- **Raydium DEX transaction tracking**
+- **PumpFun program monitoring**
+- **Transaction signature logging**
+- **Token mint address extraction**
+
 ## 🏗️ Architecture
 
+### Version 1 - Monitoring Architecture
+```
+┌─────────────────┐    ┌─────────────────┐    ┌─────────────────┐
+│   Geyser RPC    │    │  Yellowstone    │    │   Monitoring    │
+│   Connection     │───▶│   gRPC Client   │───▶│     Service     │
+└─────────────────┘    └─────────────────┘    └─────────────────┘
+                                │
+                                ▼
+                    ┌─────────────────────────┐
+                    │   Transaction Parser    │
+                    │  (LetsBonk, Raydium,   │
+                    │      PumpFun)           │
+                    └─────────────────────────┘
+                                │
+                                ▼
+                    ┌─────────────────────────┐
+                    │   Token Launch Logger   │
+                    │  (Solscan Links)        │
+                    └─────────────────────────┘
+```
+
+### Version 2 - Full Trading Architecture (Available via DM)
 ```
 ┌─────────────────┐    ┌─────────────────┐    ┌─────────────────┐
 │   Web Client    │    │   Mobile App    │    │   API Gateway   │
@@ -73,11 +104,10 @@ https://github.com/user-attachments/assets/9c55ae45-20af-4b73-a443-bec5fada72da
 ## 🚀 Quick Start
 
 ### Prerequisites
-- Python 3.8+
 - Node.js 20+
-- Docker & Docker Compose
-- Solana CLI tools
+- TypeScript 5.3+
 - Solana RPC provider (Helius, QuickNode, etc.)
+- Geyser RPC access
 
 ### Installation
 
@@ -89,97 +119,68 @@ cd letsbonk-dot-fun-trading-bot
 
 2. **Install dependencies**
 ```bash
-# Python dependencies
-pip install -r requirements.txt
-
-# Node.js dependencies
 npm install
-
-# Docker setup
-docker-compose up -d
 ```
 
 3. **Configure environment**
 ```bash
 cp .env.example .env
-# Edit .env with your Solana configuration
+# Edit .env with your configuration:
+# GEYSER_RPC="your_geyser_rpc_url"
+# GEYSER_KEY="your_geyser_key"
+# RPC_URL="https://mainnet.helius-rpc.com/?api-key=your_api_key"
 ```
 
-4. **Start the bot**
+4. **Build and start the monitoring bot**
 ```bash
-# Start all services
-python main.py
+# Build TypeScript
+npm run build
 
-# Or start individual services
-python -m services.trading_service
-python -m services.sniper_service
-python -m services.copy_trade_service
+# Start monitoring
+npm start
+
+# Or run in development mode
+npm run dev
 ```
 
 ## 📖 Usage
 
-### Sniper Bot Configuration
+### Version 1 - Monitoring Bot
 
-```python
-from services.sniper_service import SniperBot
+The monitoring bot automatically detects and logs new token launches on Solana:
 
-sniper = SniperBot(
-    wallet_address="YOUR_SOLANA_WALLET_ADDRESS",
-    private_key="YOUR_PRIVATE_KEY",
-    rpc_url="https://api.mainnet-beta.solana.com",
-    commitment="confirmed"
-)
+```typescript
+import { subscribeGeyser } from "./src/bot";
 
-# Start sniping
-sniper.start_sniping(
-    target_tokens=["TOKEN_MINT_ADDRESS_1", "TOKEN_MINT_ADDRESS_2"],
-    buy_amount=0.1,  # SOL
-    auto_sell=True,
-    profit_target=0.5  # 50%
-)
+// Start monitoring
+subscribeGeyser();
 ```
 
-### Copy Trading Setup
-
-```python
-from services.copy_trade_service import CopyTradeBot
-
-copy_bot = CopyTradeBot(
-    source_wallet="TRADER_WALLET_ADDRESS",  # Trader to copy
-    target_wallet="YOUR_WALLET_ADDRESS",    # Your wallet
-    allocation_percentage=0.1,  # 10% of portfolio
-    max_position_size=0.05  # 5% max per trade
-)
-
-# Start copy trading
-copy_bot.start_copying()
+**Output Example:**
+```
+https://solscan.io/token/TokenMintAddressHere
+https://solscan.io/tx/TransactionSignatureHere
+================================================
 ```
 
-### gRPC API Usage
+### Version 2 - Full Trading Bot (Available via DM)
 
-```python
-import grpc
-from proto import trading_pb2, trading_pb2_grpc
-
-# Connect to gRPC server
-channel = grpc.insecure_channel('localhost:50051')
-stub = trading_pb2_grpc.TradingServiceStub(channel)
-
-# Place order
-order = trading_pb2.Order(
-    token_mint="TOKEN_MINT_ADDRESS",
-    amount=0.1,
-    order_type=trading_pb2.OrderType.BUY,
-    slippage=0.05
-)
-
-response = stub.PlaceOrder(order)
-print(f"Order placed: {response.order_id}")
-```
+For the complete trading bot with sniping and copy trading capabilities, contact me on Telegram.
 
 ## 🔧 Configuration
 
 ### Environment Variables
+
+```bash
+# Geyser Configuration (Required for Version 1)
+GEYSER_RPC="your_geyser_rpc_url"
+GEYSER_KEY="your_geyser_key"
+
+# Solana RPC Configuration
+RPC_URL="https://mainnet.helius-rpc.com/?api-key=your_api_key"
+```
+
+### Version 2 Configuration (Available via DM)
 
 ```bash
 # Solana Configuration
@@ -204,33 +205,15 @@ GRPC_PORT=50051
 DATABASE_URL=postgresql://user:pass@localhost:5432/trading_bot
 ```
 
-### Trading Parameters
-
-```yaml
-sniper:
-  enabled: true
-  compute_unit_limit: 200000
-  max_slippage: 0.05
-  profit_target: 0.5
-  stop_loss: 0.2
-  auto_sell: true
-
-copy_trading:
-  enabled: true
-  allocation_percentage: 0.1
-  max_position_size: 0.05
-  min_trade_amount: 0.01
-  max_trades_per_hour: 10
-
-risk_management:
-  max_daily_loss: 0.1
-  max_position_size: 0.05
-  stop_loss_percentage: 0.2
-  take_profit_percentage: 0.5
-```
-
 ## 📊 Performance Metrics
 
+### Version 1 - Monitoring
+- **Real-time detection**: < 1 second token launch detection
+- **Program support**: LetsBonk, Raydium, PumpFun
+- **Uptime**: 99.9% availability
+- **Memory usage**: < 100MB
+
+### Version 2 - Full Trading (Available via DM)
 - **Execution Speed**: < 100ms order placement
 - **Success Rate**: 95%+ successful snipes
 - **Transaction Cost**: ~0.000005 SOL per transaction
@@ -239,6 +222,12 @@ risk_management:
 
 ## 🔒 Security Features
 
+### Version 1 - Monitoring
+- **Secure gRPC communication** with Geyser
+- **Input validation** and sanitization
+- **Error handling** and logging
+
+### Version 2 - Full Trading (Available via DM)
 - **Private key encryption** with AES-256
 - **Secure gRPC communication** with TLS
 - **Rate limiting** and DDoS protection
@@ -249,28 +238,40 @@ risk_management:
 
 ```bash
 # Run all tests
-pytest tests/
+npm test
 
 # Run specific test suites
-pytest tests/test_sniper.py
-pytest tests/test_copy_trading.py
-pytest tests/test_grpc.py
-
-# Performance testing
-pytest tests/test_performance.py
+npm run test:monitoring
+npm run test:trading  # Version 2 only
 ```
 
 ## 📈 Monitoring
 
-### Prometheus Metrics
+### Version 1 - Real-time Monitoring
+- Token launch detection
+- Transaction signature logging
+- Program interaction tracking
+- Error rate monitoring
+
+### Version 2 - Full Analytics (Available via DM)
 - Order execution time
 - Success/failure rates
 - Transaction costs
 - Profit/loss tracking
 - API response times
 
-### Grafana Dashboards
-- Real-time trading performance
-- Portfolio value tracking
-- Gas optimization metrics
-- Error rate monitoring
+## 🔗 Contact for Version 2
+
+**For the complete TypeScript trading bot with sniping and copy trading capabilities, contact me on Telegram:**
+
+<a href="https://t.me/cashblaze129" target="_blank">
+  <img src="https://img.shields.io/badge/Telegram-@Contact_Me-0088cc?style=for-the-badge&logo=telegram&logoColor=white" alt="Telegram Support" />
+</a>
+
+**Version 2 includes:**
+- Full sniping capabilities
+- Copy trading features
+- Advanced risk management
+- Portfolio tracking
+- Web dashboard
+- Mobile app support

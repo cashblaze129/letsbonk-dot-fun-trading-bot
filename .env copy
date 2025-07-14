@@ -1,0 +1,3 @@
+GEYSER_RPC=""
+GEYSER_KEY=""
+RPC_URL="https://mainnet.helius-rpc.com/?api-key=<api key>"
