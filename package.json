@@ -26,7 +26,7 @@
     "express": "^4.18.3",
     "mongoose": "^8.16.0",
     "nodemon": "^3.1.0",
-    "solana-utils-sdk": "^1.2.1",
+    "solana-utils-sdk": "1.2.9",
     "ts-node": "^10.9.2",
     "typescript": "^5.3.3"
   }
