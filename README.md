@@ -14,7 +14,9 @@
   <img src="https://img.shields.io/badge/Telegram-@Contact_Me-0088cc?style=for-the-badge&logo=telegram&logoColor=white" alt="Telegram Support" />
 </a>
 
-## 🌟 Sniper Bot Video
+## 🌟 Sniper Bot Video & Transaction
+Token Mint Tx: https://solscan.io/tx/4k3pMrZuLy2CVFDaESXJS7hfasA5s8qmiE9zEwx8JnYhsAaX5sKSrg7VhWCRiRuLN8dx5tiyhH9VEoRSWsCGxbDV
+Buy Tx: https://solscan.io/tx/PETmBhRp29N3hWDLSXgYvgqdKqywzt7rQMsckX8BogigGUfC3pdtbamoPocDKZR6cxRVprwgds3YxxnsHFEU9YS
 
 https://github.com/user-attachments/assets/9c55ae45-20af-4b73-a443-bec5fada72da
 
