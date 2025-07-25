@@ -1,4 +1,4 @@
-# 🚀 LetsBonkDotFun Solana Trading Bot
+# 🚀 BonkFun Sniper Bot Bot
 
 **Super Fastest Solana Trading Bot with Sniper & Copy Trading & Bundler Capabilities**
 
