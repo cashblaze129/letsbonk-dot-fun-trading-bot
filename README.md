@@ -15,11 +15,6 @@
 </a>
 
 ## 🌟 Sniper Bot Video & Transaction
-Token Mint Tx: <br />
-https://solscan.io/tx/4k3pMrZuLy2CVFDaESXJS7hfasA5s8qmiE9zEwx8JnYhsAaX5sKSrg7VhWCRiRuLN8dx5tiyhH9VEoRSWsCGxbDV
-<br />
-Buy Tx: <br />
-https://solscan.io/tx/PETmBhRp29N3hWDLSXgYvgqdKqywzt7rQMsckX8BogigGUfC3pdtbamoPocDKZR6cxRVprwgds3YxxnsHFEU9YS
 
 https://github.com/user-attachments/assets/9c55ae45-20af-4b73-a443-bec5fada72da
 
